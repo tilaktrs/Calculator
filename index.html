@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>TEMPERATURE CONVERTOR</title>
+
+<script>
+    function convert()
+    {
+          var x=document.getElementById("id2").value;
+         var y=document.getElementById("id1").value;
+         var z=document.getElementById("id3").value;
+        if(y=="fahrenhiet"){
+            if(z=="fahrenhiet")
+            {  
+   document.getElementById("id4").value=x;
+            }
+            else
+            {
+            var a=(x-32)*(5/9);
+                var a=parseInt(a);
+                document.getElementById("id4").value=a;
+            }
+        }
+        else if(y=="celcius"){
+            if(z=="fahrenhiet")
+            {
+                var a= ((9/5)*x)+32;
+                //var a=parseInt(a);
+                document.getElementById("id4").value=a;
+            }
+            else
+            {
+                document.getElementById("id4").value=x;
+            }
+        }
+                
+    }
+    
+    
+    </script>
+        
+    </head>
+    <body>
+        
+        <form style="border:2px solid black; background-color: aqua;padding:10px 2px 10px 2px; margin-bottom: 200px ;margin-top: 50px;margin-left: 500px;margin-right: 500px;">
+       <center>
+           <select id="id1">
+               <option>select</option>
+           <option>celcius</option>
+               <option >fahrenhiet</option>
+           </select>
+           
+           
+           <input type="text" id="id2">
+    <br>
+    <br>
+<br>
+    <center><input type="button" onclick="convert()" value="convert"></center>
+           <br>
+    <br>
+<br>
+           <select id="id3">
+               <option>select</option>
+           <option >celcius</option>
+               <option>fahrenhiet</option>
+           </select>
+           
+
+
+    <input  type="text" id="id4">
+           <br>
+           <br>
+       <input type="reset">    
+
+    </center>
+</form> 
+    </body>
+
+</html>
